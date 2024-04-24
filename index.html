@@ -10,35 +10,36 @@
 
     <nav class="bg-slate-900 text-white w-full h-20 px-8 shadow-xl shadow-neutral-500 sticky top-0 z-50 flex items-center justify-between">
 
-        <div class="outline outline-slate-100">
+        <div class="w-20 max-w-36 border border-white grid place-content-center overflow-hidden">
             <h3 class="text-3xl">Logo</h3>
         </div>
 
         
-        <input class="peer" type="checkbox" id="menu">
-        <label class="" for="menu">
-            <div class="w-8 h-1 bg-white "></div>
-            <div class="w-8 h-1 bg-white "></div>
-            <div class="w-8 h-1 bg-white "></div>
-        </label>
         
-        <ul class="absolute inset-0 h-[40vh] bg-transparent -z-10 mt-20 flex flex-col items-center justify-center gap-3 text-black text-xl backdrop-blur-md -translate-y-[120%] peer-checked:translate-y-0 transition-all">
-            <li>
+        <ul id="nav-ul" class="absolute inset-0 h-[40vh] bg-transparent -z-10 mt-20 flex flex-col items-center justify-center gap-3 text-black text-xl backdrop-blur-md -translate-y-[120%] transition-all md:static md:translate-y-[unset] md:mt-0 md:backdrop-blur-0 md:text-white md:h-[unset] md:flex-row md:gap-6">
+            <li class="hover:opacity-70">
                 <a href="#">Inicio</a>
             </li>
-            <li>
+            <li class="hover:opacity-70">
                 <a href="#">Inicio</a>
             </li>
-            <li>
+            <li class="hover:opacity-70">
                 <a href="#">Inicio</a>
             </li>
         </ul>
-
+        
+        <label id="nav-label" class="relative md:hidden" for="menu">
+            <input class="peer hidden" type="checkbox" id="menu">
+            <div class="menu peer-checked:rotate-45 peer-checked:translate-y-2 transition-all"></div>
+            <div class="menu mt-1  peer-checked:opacity-0 transition-all"></div>
+            <div class="menu mt-1 peer-checked:-rotate-45 peer-checked:-translate-y-2 transition-all"></div>
+        </label>
     </nav>
 
-    <main class="h-[300vh]">
-        <h1 class="text-3xl">Esto es el main</h1>
+    <main class="h-[150vh] pt-14">
+        <h1 class="text-5xl bold text-center ">Aqui va el contenido</h1>
     </main>
 
+    <script src="./src/js/app.js"></script>
 </body>
 </html>
